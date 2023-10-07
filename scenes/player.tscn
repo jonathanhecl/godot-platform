@@ -12,10 +12,9 @@ font_size = 48
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("ScoreLabel") groups=["Player"]]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(-72, -28)
 script = ExtResource("1_80ffs")
-ScoreLabel = NodePath("")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_selr5")
@@ -26,6 +25,7 @@ shape = SubResource("CapsuleShape2D_8p2uo")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 28)
 zoom = Vector2(3, 3)
+limit_bottom = 100
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
